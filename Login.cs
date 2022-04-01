@@ -25,5 +25,17 @@ namespace OOP_Banco
             this.Senha = txtSenha.Text;
             this.Close();
         }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "")
+            {
+                btnLogar.Enabled = false;
+            }
+            else
+            {
+                btnLogar.Enabled = true;
+            }
+        }
     }
 }
